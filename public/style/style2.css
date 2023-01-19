@@ -1,0 +1,641 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+    margin      : 0;
+    border      : 0;
+    box-sizing  : border-box;
+    font-family : 'Lato', sans-serif;
+}
+
+
+
+header {
+    display          : flex;
+    flex-direction   : row;
+    background-color : #040513;
+    justify-content  : space-between;;
+    padding          : 20px 30px;
+
+}
+
+
+
+
+header>img {
+    width : 60px;
+}
+header>h1 {
+    color      : #FFFFFF;
+    text-align : center;
+}
+#nav-landing {
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    gap            : 10px;
+}
+
+#nav-user {
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    gap            : 50px;
+}
+
+.menu-user > a {
+    color           : #AAAAAA;
+    text-decoration : none;
+}
+
+.menu-active {
+    color : #FFFFFF !important;
+}
+
+.btn-logout {
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    gap            : 5px;
+    padding        : 5px 10px;
+    color          : #ff2e2e !important;
+}
+
+main {
+    display        : flex;
+    flex-direction : column;
+}
+
+/* section bg */
+
+.link-login {
+    text-decoration  : none;
+    padding          : 10px 30px;
+    background-color : #444ba0;
+    color            : white !important;
+    font-weight      : bold;
+}
+
+.link-signup {
+    text-decoration  : none;
+    padding          : 10px 30px;
+    color            : white !important;
+    font-weight      : bold;
+    background-color : #44a04a;
+}
+
+#section-with-bg {
+    background          : url("../assets/bgg.png");
+    width               : 100%;
+    background-position : right;
+    background-repeat   : no-repeat;
+    background-size     : cover;
+    height              : 100vh;
+    padding             : 20px;
+    color               : #FFFFFF;
+    display             : flex;
+    flex-direction      : column;
+    align-items         : center;
+    justify-content     : center;
+    gap                 : 50px;
+}
+#section-with-bg>img{
+    filter: brightness(40%);
+}
+.height-full {
+    height : max-content !important;
+}
+.hpage{
+    height: 10px;
+
+}
+#section-description {
+    width          : 100%;
+    padding        : 0px;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    gap            : 20px;
+    margin-bottom: 5%;
+}
+
+#section-description>h2 {
+    color      : #FFFFFF;
+    font-size  : 2em;
+    text-align : center;
+}
+
+#section-description>p {
+    text-align : center;
+}
+
+
+#form-cari-tiket {
+    display          : flex;
+    flex-direction   : column;
+    gap              : 15px;
+    width            : 100%;
+    background-color : #040513;
+    padding          : 20px 30px 30px 30px;
+    border-radius    : 5px;
+}
+
+.input-cari-tiket {
+    display        : flex;
+    flex-direction : column;
+    gap            : 5px;
+}
+
+.input-cari-tiket>input, .input-cari-tiket>select {
+    padding       : 10px;
+    border-radius : 5px;
+}
+
+.input-cari-tiket>select {
+    background-color : #FFFFFF;
+}
+
+#input-button-cari {
+    margin-top : 10px;
+    border-top : 1px solid gray;
+}
+
+#btn-cari-tiket {
+    padding          : 10px;
+    margin-top       : 20px;
+    width            : 100%;
+    color            : #FFFFFF;
+    font-weight      : bold;
+    background-color : #444ba0;
+}
+
+#btn-cari-tiket:hover {
+    cursor : pointer
+}
+
+/* section terminal */
+#section-terminal {
+    display          : flex;
+    flex-direction   : column;
+    gap              : 30px;
+    background-color : #040513;
+    color            : #FFFFFF;
+    padding          : 90px;
+    padding-bottom   : 25px;
+}
+
+section>h2 {    
+    text-align : center;
+}
+
+#terminals {
+    display               : grid;
+    grid-template-columns : auto;
+    gap                   : 30px;
+}
+
+.terminal {
+    display         : flex;
+    flex-direction  : column;
+    height          : 300px;
+    justify-content : flex-end;
+    padding         : 20px;
+    width           : 100%;
+    gap             : 5px;
+}
+
+.terminal > p {
+    font-size : 0.6em;
+    width     : 175px;
+    color     : #cccccc;
+}
+
+#section-feature {
+    display          : flex;
+    flex-direction   : column;
+    gap              : 30px;
+    background-color : #040513;
+    color            : #FFFFFF;
+    padding          : 90px;
+    padding-top      : 50px
+}
+
+#features {
+    display               : grid;
+    grid-template-columns : auto;
+    gap                   : 30px;
+}
+
+.feature {
+    background-color : #4d5193;
+    height           : 200px;
+    display          : flex;
+    flex-direction   : row;
+    align-items      : center;
+    justify-content  : space-between;
+    padding          : 30px;
+}
+
+.icon-feature {
+    padding       : 20px;
+    border-radius : 100%;
+    border        : 1px solid rgb(169, 169, 169);
+}
+
+.icon-feature > i {
+    font-size : 4em;
+}
+
+.icon-detail {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    width          : 60%;
+    gap            : 5px;
+}
+
+.icon-detail > p {
+    height     : 25px;
+    font-size  : 0.8em;
+    color      : #cccccc;
+    text-align : center;
+}
+
+/* schedule */
+#section-getbus {
+    display               : none;
+    grid-template-columns : 100%;
+    justify-content       : space-evenly;
+    gap                   : 30px;
+    align-items           : center;
+    color                 : #FFFFFF;
+    padding               : 90px;
+    background-color      : #040513;
+}
+
+#no-data {
+    background-color  : #444ba0;
+    height            : 100px;
+    grid-column-start : 1;
+    grid-column-end   : 20;
+    display           : flex;
+    flex-direction    : column;
+    align-items       : center;
+    justify-content   : center;
+}
+
+.schedule-item>img {
+    width  : 100%;
+    height : 300px;
+}
+
+.schedule-item {
+    background-color : #444ba0;
+    display          : flex;
+    flex-direction   : column;
+    gap              : 5px;
+    border-radius    : 5px;
+}
+
+.detail-schedule {
+    padding        : 0 20px;
+    padding-bottom : 30px;
+    display        : flex;
+    flex-direction : column;
+    gap            : 5px;
+}
+
+.detail-schedule > button {
+    background-color : #44a04a;
+    width            : 100%;
+    padding          : 10px;
+    text-align       : center;
+    color            : #FFFFFF;
+    text-decoration  : none;
+    font-weight      : bold;
+}
+
+.detail-schedule > button:hover {
+    cursor           : pointer;
+    background-color : #60d068 ;
+}
+
+.asal-tujuan {
+    font-style : oblique;
+}
+
+.waktu-jadwal {
+    font-weight : bold;
+}
+
+.sisa-tiket {
+    color : #cccccc;
+}
+
+.price-schedule {
+    padding     : 0 20px;
+    font-size   : 2em;
+    font-weight : bold;
+}
+
+/* form */
+.form-beli {
+    display          : flex;
+    flex-direction   : column;
+    background-color : #040513;
+    padding          : 20px;
+    width            : 100%;
+    border-radius    : 10px;
+}
+
+/* form */
+.form-full {
+    display        : flex;
+    flex-direction : column;
+    gap            : 15px;
+}
+
+.border-form {
+    margin-top  : 5px;
+    padding-top : 10px;
+}
+
+.border-form > .form-group > label {
+    font-weight : bold;
+}
+
+.form-group {
+    display        : flex;
+    flex-direction : column;
+    gap            : 10px;
+}
+
+.form-group-row {
+    display        : flex;
+    flex-direction : row;
+    gap            : 10px;
+    align-items    : center;
+
+}
+
+.form-group > label {
+    font-size : 0.9em;
+}
+
+.form-group > input[type="text"], .form-group> input[type="email"], .form-group > input[type="tel"], .form-group > input[type="number"] , .form-group > select, .form-group > input[type="date"], .form-group > input[type="password"], .form-group > input[type="time"] {
+    padding       : 10px;
+    border        : 1px solid #BEC2CC;
+    border-radius : 5px;
+}
+
+.radios {
+    display        : flex;
+    flex-direction : row;
+    gap            : 10px;
+}
+
+/* modal */
+#beli-modal {
+    display: none;
+}
+
+.float-modal {
+    position         : fixed;
+    color: #040513;
+    z-index          : 5;
+    top              : 0;
+    left             : 0;
+    height           : 0;
+    bottom           : 0;
+    width            : 100%;
+    height           : 100%;
+    display          : flex;
+    align-items      : center;
+    background-color : #1c1c1ec2;
+}
+
+.modal {
+    background-color : #FFFFFF;
+    display          : flex;
+    flex-direction   : column;
+    margin           : auto;
+    width            : 30em;
+    max-height       : 600px;
+    min-height       : min-content;
+    height           : max-content;
+    border-radius    : 10px;
+    overflow         : auto;
+}
+
+.modal::-webkit-scrollbar {
+    width : 5px;
+}
+
+.modal::-webkit-scrollbar-track {
+    border-radius    : 0 75px 75px 0;
+    background-color : darkgrey;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    box-shadow : inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-head {
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    padding         : 15px 25px;
+    border-bottom   : 1px solid #b5b5b5;
+}
+
+.modal-body {
+    padding : 20px 25px;
+}
+
+/* item delete info */
+.info-item-delete {
+    border-collapse : collapse;
+    width           : 100%;
+}
+
+.info-item-delete>tbody>tr>td, .info-item-delete>tbody>tr>th {
+    text-align : start;
+    padding    : 10px 0;
+}
+
+.info-item-delete>tbody>tr>th {
+    width : 150px;
+}
+
+.btn {
+    padding       : 10px 12px;
+    width         : min-content;
+    outline       : none;
+    border        : none;
+    border-radius : 5px;
+}
+
+.btn:hover {
+    cursor : pointer;
+}
+
+.btn-success {
+    padding          : 3px 12px;
+    background-color : #00ADB5;
+    border-radius    : 20px;
+}
+
+
+.btn-info {
+    background-color : rgb(58, 58, 235);
+    font-weight      : bold;
+    color            : white;
+}
+
+.btn-warning {
+    background-color : #e3a815;
+    color            : #FFFFFF;
+}
+
+.btn-netral {
+    background-color : #3F3F3F;
+    color            : #F3F4FA;
+}
+
+.btn-danger {
+    background-color : rgb(215, 48, 48);
+    color            : #FFFFFF;
+}
+
+.btn-success2 {
+    background-color : #14ac60;
+    color            : #FFFFFF;
+}
+
+
+.btn-flex {
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    gap            : 5px;
+}
+
+.btn-flex>span {
+    font-size : 16px;
+}
+
+.btn-link {
+    width            : max-content;
+    color            : #FFFFFF;
+    background-color : #14ac60;
+    text-decoration  : none;
+}
+
+.btn-full {
+    margin-top  : 5px;
+    width       : 100%;
+    color       : #FFFFFF;
+    font-weight : bold;
+}
+
+.btn-no-bg {
+    padding    : 0;
+    color      : rgb(185, 182, 182);
+    background : none;
+    outline    : none;
+    border     : none;
+}
+
+.btn-no-bg:hover {
+    cursor : pointer;
+}
+
+#section-table {
+    overflow-x       : auto;
+    padding          : 50px 20px;
+    background-color : #040513;
+    color            : #FFFFFF;
+}
+
+#daftar-tiket {
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    background-color: #040513;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    #section-with-bg {
+        padding             : 90px;
+    }
+    #section-getbus {
+        grid-template-columns : auto auto;
+    }
+    #section-table {
+        padding          : 50px 30px;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+    #section-getbus {
+        grid-template-columns : auto auto auto;
+    }
+
+    #section-description {
+        width   : 600px;
+        padding : 0px;
+    }
+
+    #section-table {
+        padding          : 50px 50px;
+    }
+
+    #terminals {
+        display               : grid;
+        grid-template-columns : auto auto auto auto;
+        gap                   : 50px;
+    }
+
+    #features {
+        grid-template-columns : 24% 24% 24%;
+        justify-content       : space-evenly;
+    }
+
+    .feature {
+        flex-direction  : column;
+        justify-content : space-between;
+        padding         : 50px 30px;
+        gap             : 50px;
+        height          : auto;
+    }
+
+    .icon-feature {
+        padding : 30px;
+    }
+
+    #form-cari-tiket {
+        display               : grid;
+        grid-template-columns : auto auto auto auto auto;
+        gap                   : 10px;
+        align-items           : flex-end;
+    }
+
+    .input-cari-tiket>input, .input-cari-tiket>select, #btn-cari-tiket {
+        border-radius : 0px;
+        height        : 60px;
+        width         : 100%;
+    }
+
+    #input-button-cari {
+        margin     : 0;
+        border-top : 0;
+    }
+
+}
