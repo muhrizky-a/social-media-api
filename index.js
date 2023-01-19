@@ -2,9 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
-const userRoute = require('./routes/user');
-const authRoute = require('./routes/auth');
-const postRoute = require('./routes/post');
+const userRoute = require('./src/routes/user');
+const authRoute = require('./src/routes/auth');
+const postRoute = require('./src/routes/post');
 
 // Initialize server
 const app = express();

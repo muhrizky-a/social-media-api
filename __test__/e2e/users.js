@@ -20,7 +20,9 @@ describe('Create User with Valid Payload', (response) => {
     test('response body have correct property and value', () => {
         expect(response.body.code).toBe(201);
         expect(response.body.data).toHaveProperty('id');
-        expect(response.body.data.id).toBe(1);
+        expect(response.body.data.id).toBe(parseInt(process.env.JOHN_ID));
+
+        process.env.JOHN_ID = response.body.data.id;
     });
 });
 
@@ -106,7 +108,7 @@ describe('Get All Users', (response) => {
 
 describe('Get User by Id', (response) => {
     it('Request API', async () => {
-        response = await request(process.env.HOST).get(`/users/1`);
+        response = await request(process.env.HOST).get(`/users/${process.env.JOHN_ID}`);
     });
 
     test('it should response 200 status code', () => {
@@ -270,7 +272,7 @@ describe('(John) Update Password with Valid Payload', (response) => {
 
 describe('Get User by Id (John) After Update Email', (response) => {
     it('Request API', async () => {
-        response = await request(process.env.HOST).get(`/users/1`);
+        response = await request(process.env.HOST).get(`/users/${process.env.JOHN_ID}`);
     });
 
     test('it should response 200 status code', () => {
