@@ -6,12 +6,29 @@
 - [Run API](#run-api)
 
 # About
-This is an API for simple Social Media.
-Features:
+This is an API for simple Social Media. Like a social media, it has these core features:
 - CRUD User
-- Login Feature
+- Login Feature (with JWT)
 - CRUD Post
 
+## Project structure
+
+    .
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── __test__                # Automated tests (alternatively `spec` or `tests`)
+    ├── uploads                 # Tools and utilities
+    ├── .env                    # Environtment Variables
+    ├── .sequelizerc            # Sequelize configuration file
+    ├── index.js                # Main app
+    ├── jest.config.js          # Jest configuration file
+    ├── package-lock.json       # Node.js project Informations
+    ├── package.json            # Node.js project Informations
+    └── README.md               # Documentation
+
+The project structure like this is for easier folder and file management within project.
+The API uses `Model Route Controller Service` pattern to separate data model, business logics, and controller that invokes the logic.
+
+All of these pattern are used for better code readability and maintenance.
 
 
 # Installation and Configuration
