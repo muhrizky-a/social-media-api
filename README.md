@@ -3,10 +3,16 @@
 
 - [About](#about)
 - [Installation and Configuration](#Installation-and-configuration)
-- [Deploy To VPS](#deploy-to-vps)
+- [Run API](#run-api)
 
 # About
-This is an API for Interior Design Application.
+This is an API for simple Social Media.
+Features:
+- CRUD User
+- Login Feature
+- CRUD Post
+
+
 
 # Installation and Configuration
 ## Node
@@ -18,52 +24,6 @@ nvm list-remote
 nvm install lts/*
 ```
 
-## Nginx
-### Install
-- Run these commands to install nginx web server.
-```bash
-sudo apt update
-sudo apt install nginx -y
-```
-
-### Configure new Domain
-- Change directory to /var/www
-```bash
-cd /var/www
-````
-
-- Create directory for new domain.
-```bash
-sudo mkdir api-dev.interumah
-```
-
-- (Optional) Check for recently created directory.
-```bash
-ls
-```
-
-- Next, assign ownership of the directory with the $USER environment variable:
-```bash
-sudo chown -R $USER:$USER /var/www/api-dev.interumah
-```
-
-
-To ensure that your permissions are correct and allow the owner to read, write, and execute the files while granting only read and execute permissions to groups and others, you can input the following command:
-- Run `sudo chmod -R 755 /var/www/api-dev.interumah`
-
-- Run `nano /var/www/api-dev.interumah/index.html`
-
-In order for Nginx to serve this content, it’s necessary to create a server block with the correct directives. Instead of modifying the default configuration file directly, let’s make a new one at /etc/nginx/sites-available/your_domain:
-- Run `sudo nano /etc/nginx/sites-available/api-dev.interumah`
-- Run `sudo ln -s /etc/nginx/sites-available/api-dev.interumah /etc/nginx/sites-enabled/`
-
-### Finalize
-- Run `sudo nano /etc/nginx/nginx.conf`
-- Restart nginx
-```bash
-sudo nginx -t
-sudo systemctl restart nginx
-```
 
 ## MySQL
 ### Install
@@ -94,3 +54,32 @@ mysql > FLUSH PRIVILEGES;
 
 ### Finalize
 `sudo systemctl start mysql.service`
+
+# Run API
+## Clone GitHub Repo
+- Run these commands to clone this repo
+```bash
+cd ~
+git clone https://github.com/muhrizky-a/social-media-api.git
+cd ~/social-media-api
+```
+
+## Install Node Packages
+- Run these commands to install packages needed to run the API
+```bash
+npm install
+npm install pm2 -g
+npm run migrate:up
+```
+## Start the API
+- Run these commands to start the API with PM2
+```bash
+cd ~/social-media-api
+pm2 start
+```
+
+## Test the API
+- Run the end-to-end testing for API
+```bash
+npm test
+```
